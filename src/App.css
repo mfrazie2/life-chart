@@ -8,3 +8,8 @@
 .card {
   padding: 2em;
 }
+
+.whereCheckboxesGo {
+  display: flex;
+  flex-wrap: wrap;
+}
