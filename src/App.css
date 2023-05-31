@@ -9,7 +9,36 @@
   padding: 2em;
 }
 
-.whereCheckboxesGo {
+.whereCheckBoxesGo {
   display: flex;
   flex-wrap: wrap;
+}
+
+/* 
+  * Review this article again: https://css-tricks.com/html5-progress-element/
+  * Make sure that Chromium and Mozilla are supported (at a minimum)
+  * Maybe try an HTML fallback for older browsers
+*/
+
+.whereCheckBoxesGo progress {
+  
+
+  height: 40px;
+}
+
+.whereCheckBoxesGo progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #09c, #f44);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
